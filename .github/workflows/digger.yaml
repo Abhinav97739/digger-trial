@@ -17,3 +17,5 @@ jobs:
 
       - name: Run Terraform with Digger
         uses: diggerhq/digger@v0.6.83
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
