@@ -1,20 +1,8 @@
-provider "aws" {
-  region = "ap-south-1" # Change to your desired region
+provider "azurerm" {
+  features {}
 }
 
-resource "aws_resourcegroups_group" "example" {
-  name        = "abc"
-  description = "An example resource group for AWS"
-
-  resource_query {
-    query = jsonencode({
-      ResourceTypeFilters = ["AWS::AllSupported"]
-      TagFilters = [
-        {
-          Key    = "Environment"
-          Values = ["Development"]
-        }
-      ]
-    })
-  }
+resource "azurerm_resource_group" "example" {
+  name     = "example-resource-group"
+  location = "East US"
 }

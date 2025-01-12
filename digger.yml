@@ -1,0 +1,20 @@
+version: 2
+projects:
+  - name: terraform-resource-group
+    type: terraform
+    terraform:
+      backend:
+        type: s3
+        bucket: "digger-backend-bucket"
+        key: "terraform/state"
+        region: "us-east-1"
+      run:
+        plan: terraform plan
+        apply: terraform apply -auto-approve
+    steps:
+      - name: Terraform Init
+        run: terraform init
+      - name: Terraform Plan
+        run: terraform plan
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
