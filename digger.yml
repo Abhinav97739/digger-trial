@@ -1,7 +1,3 @@
 projects:
-<<<<<<< HEAD
 - name: production
-=======
-- name: infra-prod
->>>>>>> 5e7fce44752e1a98369af1976149e54315ed50dd
   dir: prod
