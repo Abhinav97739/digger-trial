@@ -21,6 +21,8 @@ variable "container_name" {
   default = "tfstate"
 }
 
+
+
 variable "lock_table_name" {
   type    = string
   default = "digger-lock-table"
