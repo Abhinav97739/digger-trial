@@ -62,3 +62,6 @@ resource "azurerm_cosmosdb_sql_database" "lock_table_database" {
   resource_group_name = "sa1_test_eic_AbhinavJha" 
   account_name        = azurerm_cosmosdb_account.example.name
 }
+
+
+
